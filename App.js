@@ -1,7 +1,7 @@
 import {StatusBar} from 'expo-status-bar';
 import React, {useState} from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import {TouchableButton, Someotherbutotn} from './components'
+import {TouchableButton, Someotherbutotn, Card} from './components'
 
 export default function App() {
 // state
@@ -15,19 +15,34 @@ export default function App() {
     return (
         <View
             style={styles.container}>
-            <TouchableButton
-                onPress={()=>{setSomeState(true)}}
-                color={'green'}
-                text={'Show'}
-                textColor={'white'}
-            />
-            <TouchableButton
-                onPress={()=>{setSomeState(false)}}
-                color={'red'}
-                text={'Hide'}
-                textColor={'white'}
-            />
-            {someState ? <Text>I'm showing</Text> : <Text>I'm hiding uwu</Text>}
+            <Card
+                color={'blue'}
+                text={'Card'}
+                textColor={'white'}>
+
+
+                <TouchableButton
+                    onPress={() => {
+                        setSomeState(true)
+                    }}
+                    color={'green'}
+                    text={'Show'}
+                    textColor={'white'}
+                />
+                <TouchableButton
+                    onPress={() => {
+                        setSomeState(false)
+                    }}
+                    color={'red'}
+                    text={'Hide'}
+                    textColor={'white'}
+                />
+                {someState ? <Text>I'm showing</Text> : <Text>I'm hiding uwu</Text>}
+
+
+            </Card>
+
+
             <StatusBar style="auto"/>
         </View>
     );

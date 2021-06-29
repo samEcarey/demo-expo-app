@@ -1,25 +1,27 @@
 import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
-export const TouchableButton = (props) => {
-
-    return (<TouchableOpacity style={{
+export const Card = (props) => {
+  console.log('props->',props)
+    return (<View style={{
         backgroundColor: props.color,
         padding: 15,
         alignItems: 'center',
         justifyContent: 'center',
-        maxWidth: 200,
-        borderRadius: 100,
+        height: '50%',
+        width: '50%',
+        borderRadius: 60,
         margin: 5,
-    }
-    }
-                              onPress={props.onPress}
+        display: 'flex',
+        flexDirection: 'column',
+    }}>
 
-    >
         <Text style={{
             fontSize: 20,
             color: props.textColor,
             fontWeight: 'bold',
         }}>{props.text}</Text>
-    </TouchableOpacity>)
+        {props.children}
+
+    </View>)
 }
