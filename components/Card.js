@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+//const icon = <FontAwesome5 name={'comments'} />;
 export const Card = (props) => {
   console.log('props->',props)
     return (<View style={{
@@ -15,12 +16,12 @@ export const Card = (props) => {
         display: 'flex',
         flexDirection: 'column',
     }}>
-
         <Text style={{
             fontSize: 20,
             color: props.textColor,
             fontWeight: 'bold',
-        }}>{props.text}</Text>
+        }}>         {props.text}
+        </Text>
         {props.children}
 
     </View>)

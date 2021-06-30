@@ -1,11 +1,11 @@
 import {StatusBar} from 'expo-status-bar';
 import React, {useState} from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import {TouchableButton, Someotherbutotn, Card} from './components'
+import {TouchableButton, Someotherbutotn, Card, Header} from './components'
 
 export default function App() {
 // state
-    const [someState, setSomeState] = useState(false)
+    // const [someState, setSomeState] = useState(false)
 
 // function
     function onCancelHandler() {
@@ -15,32 +15,33 @@ export default function App() {
     return (
         <View
             style={styles.container}>
-            <Card
-                color={'blue'}
-                text={'Card'}
-                textColor={'white'}>
+            {/*<Card*/}
+            {/*    color={'blue'}*/}
+            {/*    text={'Card'}*/}
+            {/*    textColor={'white'}>*/}
+
+            <Header/>
+
+            {/*    <TouchableButton*/}
+            {/*        onPress={() => {*/}
+            {/*            setSomeState(true)*/}
+            {/*        }}*/}
+            {/*        color={'green'}*/}
+            {/*        text={'Show'}*/}
+            {/*        textColor={'white'}*/}
+            {/*    />*/}
+            {/*    <TouchableButton*/}
+            {/*        onPress={() => {*/}
+            {/*            setSomeState(false)*/}
+            {/*        }}*/}
+            {/*        color={'red'}*/}
+            {/*        text={'Hide'}*/}
+            {/*        textColor={'white'}*/}
+            {/*    />*/}
+            {/*    {someState ? <Text>I'm showing</Text> : <Text>I'm hiding uwu</Text>}*/}
 
 
-                <TouchableButton
-                    onPress={() => {
-                        setSomeState(true)
-                    }}
-                    color={'green'}
-                    text={'Show'}
-                    textColor={'white'}
-                />
-                <TouchableButton
-                    onPress={() => {
-                        setSomeState(false)
-                    }}
-                    color={'red'}
-                    text={'Hide'}
-                    textColor={'white'}
-                />
-                {someState ? <Text>I'm showing</Text> : <Text>I'm hiding uwu</Text>}
-
-
-            </Card>
+            {/*</Card>*/}
 
 
             <StatusBar style="auto"/>
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#f1f1f1',
-        alignItems: 'center',
-        justifyContent: 'center',
+        // alignItems: 'center',
+        // justifyContent: 'center',
     }
 });
