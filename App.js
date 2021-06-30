@@ -2,6 +2,7 @@ import {StatusBar} from 'expo-status-bar';
 import React, {useState} from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import {TouchableButton, Someotherbutotn, Card, Header} from './components'
+import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 
 export default function App() {
 // state
@@ -21,10 +22,12 @@ export default function App() {
             {/*    textColor={'white'}>*/}
 
             <Header
-                height={'20%'}
-            text={'Responder'}
-            textColor={'white'}
-            />
+            headerText={'Sam Carey'}
+            subText={'patrol officer'}
+icon={'user-alt'}
+            >
+
+            </Header>
 
             {/*    <TouchableButton*/}
             {/*        onPress={() => {*/}
