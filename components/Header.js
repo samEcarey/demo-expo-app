@@ -10,42 +10,40 @@ export const Header = (props) => {
             backgroundColor: 'black',
             justifyContent: 'center'
         }}>
+            <View style={{
+                display: 'flex',
+                flexDirection: 'row'
+            }}>
+                <View style={{padding: '2%'}}><FontAwesome5 name={'pen'} size={40} color={'white'}
+                                                            float={'left'}/></View>
+                <View style={{paddingLeft: '10%'}}>
+                    <Text style={styles = {
+                        fontWeight: 'bold',
+                        fontSize: 20,
+                        color: props.textColor,
+                        letterSpacing: 1,
+                        display: 'inline'
+                    }}>{props.text.toUpperCase()}</Text>
 
-            <View style={{paddingLeft: '10%'}}>
-                {/*ICON*/}
-                <Text style={styles = {
-                    fontWeight: 'bold',
-                    fontSize: 20,
-                    color: props.textColor,
-                    letterSpacing: 1,
-                }}>{props.text.toUpperCase()}</Text>
-
-                <Text style={styles = {
-                    fontWeight: 'bold',
-                    fontSize: 30,
-                    // color: props.textColor,
-                    color: props.textColor,
-                    letterSpacing: 1,
-                }}>{props.text}</Text>
+                    <Text style={styles = {
+                        fontWeight: 'bold',
+                        fontSize: 30,
+                        // color: props.textColor,
+                        color: props.textColor,
+                        letterSpacing: 1,
+                    }}>{props.text}</Text>
+                </View>
             </View>
         </View>)
 }
 
 let styles = StyleSheet.create({
-    headerContainer: {},
     header: {
         width: '100%',
         height: '20%',
         backgroundColor: 'black',
         flexDirection: 'row',
     },
-    // headerText: {
-    //     fontWeight: 'bold',
-    //     fontSize: 20,
-    //     // color: props.textColor,
-    //     color: props.textColor,
-    //     letterSpacing: 1,
-    // }
 })
 
 
