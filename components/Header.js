@@ -3,41 +3,50 @@ import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 export const Header = (props) => {
-    console.log('props->',props)
-    return (<View style={styles.header}>
-        {/*ICON*/}
-        <View>
-<Text style={styles.headerText}>
+    console.log('props->', props)
+    return (
+        <View style={{
+            height: '20%',
+            backgroundColor: 'black',
+            justifyContent: 'center'
+        }}>
 
-</Text>
+            <View style={{paddingLeft: '10%'}}>
+                {/*ICON*/}
+                <Text style={styles = {
+                    fontWeight: 'bold',
+                    fontSize: 20,
+                    color: props.textColor,
+                    letterSpacing: 1,
+                }}>{props.text.toUpperCase()}</Text>
 
-        </View>
-
-        {/*<Text style={{*/}
-        {/*    fontSize: 20,*/}
-        {/*    color: props.textColor,*/}
-        {/*    fontWeight: 'bold',*/}
-        {/*}}>         {props.text}*/}
-        {/*</Text>*/}
-        {/*{props.children}*/}
-
-    </View>)
+                <Text style={styles = {
+                    fontWeight: 'bold',
+                    fontSize: 30,
+                    // color: props.textColor,
+                    color: props.textColor,
+                    letterSpacing: 1,
+                }}>{props.text}</Text>
+            </View>
+        </View>)
 }
 
-const styles = StyleSheet.create({
+let styles = StyleSheet.create({
+    headerContainer: {},
     header: {
         width: '100%',
         height: '20%',
         backgroundColor: 'black',
-    }
-
+        flexDirection: 'row',
+    },
+    // headerText: {
+    //     fontWeight: 'bold',
+    //     fontSize: 20,
+    //     // color: props.textColor,
+    //     color: props.textColor,
+    //     letterSpacing: 1,
+    // }
 })
 
 
-
-
-
-
-
-
-// <FontAwesome5 name={'pen'} size={50}/>
+// {/*<FontAwesome5 name={'pen'} size={50}/>*/}
